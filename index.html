@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRADING ALGORITMICO</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="https://c.mql5.com/avatar/2023/10/653165f2-4f49_big.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .align-custom-center {
+            height: 100%;
+        }
+
+        .align-custom-center .custom-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s" style="background-color: black!important;">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="mb-0 text-primary text-uppercase"></i>ALGOTRADING</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">INICIO</a>
+                <a href="#asesores" class="nav-item nav-link">ASESORES EXPERTOS</a>
+                <a href="#indicadores" class="nav-item nav-link">INDICADORES</a>
+                <a href="#señales" class="nav-item nav-link">SEÑALES</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">DOCUMENTACION</a>
+                    <div class="dropdown-menu m-0" style="background: black;color: white;">
+                        <a href="https://www.earnforex.com/libros-forex/Analisis_tecnico_de_bolsa_Robert_Edwards_John_Magee.zip"
+                            class="dropdown-item text-light">Analisis técnico</a>
+                        <a href="https://www.earnforex.com/libros-forex/La_disciplina_del_inversor_Mark_Douglas.pdf"
+                            class="dropdown-item text-light">Disciplina del inversor</a>
+                        <a href="https://www.earnforex.com/libros-forex/La_onda_de_Elliott_Arthur_Hamilton_Bolton.doc"
+                            class="dropdown-item text-light">Ondas de Elliot</a>
+                        <a href="https://www.earnforex.com/libros-forex/Mas_alla_de_las_velas_Steve_Nison.pdf"
+                            class="dropdown-item text-light">Análisis de velas</a>
+
+                    </div>
+                </div>
+                <a href="#contacto" class="nav-item nav-link">ContactO</a>
+            </div>
+            <a href="https://www.mql5.com/es/users/desarrolladormadrid/seller" target="_blank"
+                class="btn btn-primary rounded-0 py-2 px-lg-4 d-none d-lg-block">ALGORITMOS<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" style="max-height: 90vh!important;">
+                <div class="carousel-item active" style="max-height: 90vh!important;">
+                    <img class="w-100" src="img/1.jpeg" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
+                        <div class="mx-sm-5 px-5" style="max-width: 900px;">
+                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">Trading
+                                algoritmico CUENTAS REALES</h1>
+                            <H4 style="color: red;">OPERATIVA AUTOMATIZADA</H4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="carousel-item" style="max-height: 90vh!important;">
+                    <img class="w-100" src="img/2.jpeg" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
+                        <div class="mx-sm-5 px-5" style="max-width: 900px;">
+                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">LOS MEJORES ROBOTS
+                                DE TRADING</h1>
+                            <H4 style="color: red;">NUESTROS PROPIOS ALGORITMOS DE INVERSION</H4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="max-height: 90vh!important;">
+                    <img class="w-100" src="img/3.jpeg" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
+                        <div class="mx-sm-5 px-5" style="max-width: 900px;">
+                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">COPY TRADING DE
+                                SEÑALES EXPERIMENTADAS</h1>
+                            <H4 style="color: red;">RENATABILIDADES DIARIAS</H4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="custom-container align-custom-center">
+                        <div class="custom-image-container">
+                            <img class="img-fluid w-75" src="img/10.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="d-inline-block bg-secondary text-primary py-1 px-4">Nuestra Estrategia</p>
+                    <h1 class="text-uppercase mb-4">INTELIGENCIA ARTIFICAL APLICADA A LOS mercados</h1>
+                    <p>Descubre cómo nuestra inteligencia artificial está cambiando la forma en que operas en el
+                        mercado de Forex. Nuestros
+                        algoritmos avanzados analizan datos en tiempo real para brindarte señales de trading precisas y
+                        oportunas. </p>
+                    <p class="mb-4">Con nuestra
+                        plataforma, puedes tomar decisiones informadas y maximizar tus inversiones en Forex. ¡Únete a
+                        nosotros y descubre cómo
+                        la IA spuede potenciar tu éxito financiero!
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h4 class="text-uppercase mb-3">5 AÑOS DESARROLLANDO ESTRATEGIAS</h4>
+
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="text-uppercase mb-3">10.000+ OPERACIONES RENTABLES</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5" id="señales">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block bg-secondary text-success py-1 px-4">
+                    Copy Trading Señales
+                </p>
+                <h1 class="text-uppercase"><a href="https://www.mql5.com/es/signals/my/all?orderby=gain" target="_blank"
+                        class="text-white"> Subscripcion mensual </a></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Beast 9: 30$ AL MES
+
+
+                            </h3>
+
+                            <h2 class="text-uppercase text-success">+1650%</h2>
+                            <iframe frameborder="0" width="" height="140"
+                                src="https://www.mql5.com/es/signals/widget/signal/6vtw"></iframe>
+
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Beast 1: 30$ AL MES</h3>
+
+                            <h2 class="text-uppercase text-success">+1350%</h2>
+                            <iframe frameborder="0" height="140"
+                                src="https://www.mql5.com/es/signals/widget/signal/6vty"></iframe>
+
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Beast 7: 30$ AL MES</h3>
+
+                            <h2 class="text-uppercase text-success">+1643%</h2>
+                            <iframe frameborder="0" height="140"
+                                src="https://www.mql5.com/es/signals/widget/signal/6vtx"></iframe>
+
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Beast 2: 30$ AL MES</h3>
+
+
+                            <h2 class="text-uppercase text-success">+1290%</h2>
+                            <iframe frameborder="0" height="140"
+                                src="https://www.mql5.com/es/signals/widget/signal/6vu0"></iframe>
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Master 27: 30$ AL MES</h3>
+
+                            <h2 class="text-uppercase text-success">+915%</h2>
+                            <iframe frameborder="0" height="140"
+                                src="https://www.mql5.com/es/signals/widget/signal/6vu1"></iframe>
+
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
+
+                        <div class="ps-4">
+                            <h3 class="text-uppercase mb-3">Mr Beast 2: 30$ AL MES</h3>
+
+                            <h2 class="text-uppercase text-success">+632%</h2>
+                            <iframe frameborder="0" height="140"
+                                src="https://www.mql5.com/es/signals/widget/signal/6vu3"></iframe>
+
+                        </div>
+                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Price Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-secondary h-100 d-flex flex-column justify-content-center p-5">
+                        <p class="d-inline-flex bg-dark text-primary py-1 px-4 me-auto">PLANES DE PRECIOS</p>
+                        <h1 class="text-uppercase mb-4">Revisa nuestros servicios para traders y precios.</h1>
+                        <div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">ROBOTS</h6>
+                                <span class="text-uppercase text-primary">$29.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">INDICADORES</h6>
+                                <span class="text-uppercase text-primary">$35.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">SEÑALES</h6>
+                                <span class="text-uppercase text-primary">$30.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">TELEGRAM</h6>
+                                <span class="text-uppercase text-primary">$19.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">SUBSCRIPCIONES</h6>
+                                <span class="text-uppercase text-primary">$30.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between py-2">
+                                <h6 class="text-uppercase mb-0">SOPORTE</h6>
+                                <span class="text-uppercase text-primary">$299.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <img class="img-fluid h-100" src="img/5.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Price End -->
+
+
+    <!-- Asesores expertos Start -->
+    <div class="container-xxl py-5" id="asesores">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block bg-secondary text-success py-1 px-4">El Dream Team</p>
+                <h1 class="text-uppercase"><a href="https://www.mql5.com/es/users/desarrolladormadrid/seller"
+                        target="_blank" class="text-white"> EA ASESORES EXPERTOS</a></h1>
+                <hr>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6  ">
+                    <a href="https://www.mql5.com/es/market/product/94963?source=Site+Profile+Seller" target="_blank">
+                        <div class="">
+                            <div class="team-img position-relative text-center">
+                                <img class="img-fluid" src="img/mrrobot.png" alt="" style="height: 300px;">
+
+                            </div>
+                            <div class="bg-secondary text-center p-4">
+                                <h5 class="text-uppercase">Mr Robot <span class="text-success">Estrategia: Grid</span>
+                                </h5>
+
+                                <H2 class="text-center">ONLY 30$</H2>
+                                <div class="text-center">
+                                    <button class="btn btn-primary">Comprar</button>
+                                    <button class="btn btn-dark">Backtesting</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-lg-3 col-md-6  ">
+        <a href="https://www.mql5.com/es/market/product/109607?source=Site+Profile+Seller" target="_blank">
+            <div class="">
+                <div class="team-img position-relative text-center">
+                    <img class="img-fluid" src="img/r2.png" alt="" style="height: 300px;">
+
+                </div>
+                <div class="bg-secondary text-center p-4">
+                    <h5 class="text-uppercase">KING <span class="text-success">Estrategia: GOLD</span> </h5>
+
+                    <H2 class="text-center">ONLY 54$</H2>
+                    <div class="text-center">
+                        <button class="btn btn-primary">Comprar</button>
+                        <button class="btn btn-dark">Backtesting</button>
+        </a>
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6  ">
+        <a href="https://www.mql5.com/es/market/product/110740?source=Site+Profile+Seller" target="_blank">
+            <div class="">
+                <div class="team-img position-relative text-center">
+                    <img class="img-fluid" src="img/dragon.jpg" alt="" style="height: 300px;">
+
+                </div>
+                <div class="bg-secondary text-center p-4">
+                    <h5 class="text-uppercase">Dragon <span class="text-success">Estrategia: Grid</span>
+                    </h5>
+
+                    <H2 class="text-center">ONLY 300$</H2>
+                    <div class="text-center">
+                        <button class="btn btn-primary">Comprar</button>
+                        <button class="btn btn-dark">Backtesting</button>
+        </a>
+
+
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6  ">
+        <a href="https://www.mql5.com/es/market/product/110388?source=Site+Profile+Seller" target="_blank">
+            <div class="">
+                <div class="team-img position-relative text-center">
+                    <img class="img-fluid" src="img/r3.jpg" alt="" style="height: 300px;">
+
+                </div>
+                <div class="bg-secondary text-center p-4">
+                    <h5 class="text-uppercase">SUPER <span class="text-success">Estrategia: MACD</span>
+                    </h5>
+
+                    <H2 class="text-center">ONLY 30$</H2>
+                    <div class="text-center">
+                        <button class="btn btn-primary">Comprar</button>
+                        <a href="https://www.mql5.com/es/market/product/110388?source=Site+Profile+Seller"
+                            target="_blank"><button class="btn btn-dark">Backtesting</button></a>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </a>
+
+    </div>
+    </div>
+    </div>
+    <!-- asesores End -->
+    <div class="text-center">
+        <iframe width="640px" height="540px" src="https://www.youtube.com/embed/Mzr70iyMa3M?si=ty5JX0Co5IE3tV8u"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Asesores expertos Start -->
+    <div class="container-xxl py-5" id="indicadores">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block bg-secondary text-success py-1 px-4">Los Mejores Aliados</p>
+                <h1 class="text-uppercase"><a href="https://www.mql5.com/es/users/desarrolladormadrid/seller"
+                        target="_blank" class="text-white">INDICADORES TRADING</a></h1>
+                <HR>
+                </HR>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6  ">
+                    <a href="https://www.mql5.com/es/market/product/110407?source=Site+Profile+Seller" target="_blank">
+                        <div class="">
+                            <div class="team-img position-relative text-center">
+                                <img class="img-fluid"
+                                    src="https://c.mql5.com/31/1025/mr-beast-trade-assistant-logo-200x200-2324.png"
+                                    alt="" style="height: 300px;">
+
+                            </div>
+
+                            <div class="bg-secondary text-center p-4">
+
+                                <h5 class="text-uppercase"><span class="text-success">Estrategia:
+                                        Tendencias </span> </h5>
+
+                                <H2 class="text-center">ONLY 30$</H2>
+                                <div class="text-center">
+                                    <button class="btn btn-primary">Comprar</button>
+                                    <button class="btn btn-dark">Backtesting</button>
+                                </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6  ">
+            <a href="https://www.mql5.com/es/market/product/111414?source=Site+Profile+Seller" target="_blank">
+                <div class="">
+                    <div class="team-img position-relative text-center">
+                        <img class="img-fluid"
+                            src="https://c.mql5.com/31/1038/mr-beast-signals-arrows-no-repaint-logo-200x200-6507.png"
+                            alt="" style="height: 300px;">
+
+                    </div>
+                    <div class="bg-secondary text-center p-4">
+                        <h5 class="text-uppercase"> <span class="text-success">Estrategia: Señales</span>
+                        </h5>
+
+                        <H2 class="text-center">ONLY 30$</H2>
+                        <div class="text-center">
+                            <button class="btn btn-primary">Comprar</button>
+                            <button class="btn btn-dark">Backtesting</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6  ">
+            <a href="https://www.mql5.com/es/market/product/106200?source=Site+Profile+Seller" target="_blank">
+                <div class="">
+                    <div class="team-img position-relative text-center">
+                        <img class="img-fluid" src="https://c.mql5.com/31/969/mr-beast-indicator-logo-200x200-2272.png"
+                            alt="" style="height: 300px;">
+
+                    </div>
+                    <div class="bg-secondary text-center p-4">
+                        <h5 class="text-uppercase"><span class="text-success">Estrategia: Beast</span>
+                        </h5>
+
+                        <H2 class="text-center">FREE 0$</H2>
+                        <div class="text-center">
+                            <button class="btn btn-primary">Comprar</button>
+                            <button class="btn btn-dark">Backtesting</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6  ">
+            <a href="https://www.mql5.com/es/market/product/110777?source=Site+Profile+Seller" target="_blank">
+                <div class="">
+                    <div class="team-img position-relative text-center">
+                        <img class="img-fluid"
+                            src="https://c.mql5.com/31/1030/mr-beast-falcon-zones-logo-200x200-4685.png" alt=""
+                            style="height: 300px;">
+
+                    </div>
+                    <div class="bg-secondary text-center p-4">
+                        <h5 class="text-uppercase"> <span class="text-success">Falcon Zones</span> </h5>
+
+                        <H2 class="text-center">FREE 0$</H2>
+                        <div class="text-center">
+                            <button class="btn btn-primary">Comprar</button>
+                            <button class="btn btn-dark">Backtesting</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+    </div>
+    </div>
+    </div>
+    <!-- indicadores End -->
+
+
+    <div class="text-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YgWNvlXuULU?si=PbucJ2nYYJZxdCyX"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+
+    <!-- Working Hours Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="h-100">
+                        <img class="img-fluid h-100" src="img/1.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-secondary h-100 d-flex flex-column justify-content-center p-5">
+                        <p class="d-inline-flex bg-dark text-primary py-1 px-4 me-auto">Horarios de Operativa</p>
+                        <h1 class="text-uppercase mb-4">Miles de oportunidades te están esperando</h1>
+                        <div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">Lunes</h6>
+                                <span class="text-uppercase">00:00 - 21:00 </span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">Martes</h6>
+                                <span class="text-uppercase">00:00 - 21:00</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">Miércoles</h6>
+                                <span class="text-uppercase">00:00 - 21:00</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">Jueves</h6>
+                                <span class="text-uppercase">00:00 - 21:00</span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom py-2">
+                                <h6 class="text-uppercase mb-0">Viernes</h6>
+                                <span class="text-uppercase">00:00 - 21:00</span>
+                            </div>
+                            <div class="d-flex justify-content-between py-2">
+                                <h6 class="text-uppercase mb-0">Sábado / Domingo</h6>
+                                <span class="text-uppercase text-success">Criptomonedas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Working Hours End -->
+
+
+    <!-- Testimonial Start -->
+    <!--
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block bg-secondary text-primary py-1 px-4">Testimonial</p>
+                <h1 class="text-uppercase">What Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+
+
+
+            </div>
+        </div>
+    </div>
+-->
+    <!-- Testimonial End -->
+
+    <div class="container-xxl py-5" id="contacto">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-secondary p-5">
+                        <p class="d-inline-block bg-dark text-primary py-1 px-4">Charlemos</p>
+                        <h1 class="text-uppercase mb-4">¿Alguna pregunta? </h1>
+                        <p class="mb-4">Envianos tus sugerencias, estamos encantados de colaborar juntos.Recuerda que
+                            rentabilidades pasadas no garantizan rentabilidades futuras. <a href="#">Disclaimer de
+                                riesgo</a>.</p>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-transparent" id="name"
+                                            placeholder="Your Name">
+                                        <label for="name">Nombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control bg-transparent" id="email"
+                                            placeholder="Your Email">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-transparent" id="subject"
+                                            placeholder="Subject">
+                                        <label for="subject">Asunto</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control bg-transparent" placeholder="Leave a message here"
+                                            id="message" style="height: 100px"></textarea>
+                                        <label for="message">Mensaje</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100" style="min-height: 400px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194347.4782683708!2d-3.844347150013206!3d40.43809861090755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e0!3m2!1ses!2ses!4v1714289994968!5m2!1ses!2ses"
+                            width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-uppercase mb-4 " style="color: rgb(191, 13, 13);">Contacta con nosotros</h4>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="btn-square bg-dark flex-shrink-0 me-3">
+                            <span class="fa fa-map-marker-alt text-primary"></span>
+                        </div>
+                        <span>Madrid (España)</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="btn-square bg-dark flex-shrink-0 me-3">
+                            <span class="fa fa-phone-alt text-primary"></span>
+                        </div>
+                        <span>+034 689456107</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="btn-square bg-dark flex-shrink-0 me-3">
+                            <span class="fa fa-envelope-open text-primary"></span>
+                        </div>
+                        <span>desarrolladormadrid@gmail.com</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-uppercase mb-4" style="color: rgb(191, 13, 13);">Enlaces de interés</h4>
+                    <a class="btn btn-link" href="">Patrocinadores</a>
+                    <a class="btn btn-link" href="">Brokers</a>
+                    <a class="btn btn-link" href="">Metatrader 4</a>
+                    <a class="btn btn-link" href="">Metatrader 5</a>
+                    <a class="btn btn-link" href="">Dicalimer de riesgo</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-uppercase mb-4" style="color: rgb(191, 13, 13);">Noticias </h4>
+                    <div class="position-relative mb-4">
+                        <input class="form-control border-1 w-100 py-3 ps-4 pe-5 "
+                            style="background-color: black;border: 1px solid gray;" type="text"
+                            placeholder="Tu correo ">
+                        <button type="button"
+                            class="btn btn-link py-2 position-absolute top-0 end-0 mt-2 me-2">REGISTRARSE</button>
+                    </div>
+                    <div class="d-flex pt-1 m-n1">
+                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="intex.html">ALGOTRADING 2024</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Diseñado por: <a class="border-bottom"
+                            href="https://desarrolladormadrid.com">desarrolladormadrid.com</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
